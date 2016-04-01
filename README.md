@@ -8,6 +8,8 @@ In case there are multiple sequence parts (hsps) per hit, the script checks the 
 In case there are more that one hit that belong to the same sample, the script checks which of the hits are longer and discardes the shorter ones.
 
 ## How to run the script
+You need to have R and the packages xml2, seqinr and plyr installed.
+
 In order to sort out duplicates, the script needs to recognize which hit belongs to which sample. The sample name must be located after the first underscore in the hit name, like someSortOfID_SAMPLENAME_someOtherInformation.
 Here's an example of a potential hit name, with the sample name being "Sebacina-incrustans-SS-16":
 C6FNANXX_Sebacina-incrustans-SS-16_AGTGGCAT-TGGCATTC_L002_R1_001_(paired)_trimmed_(paired)_contig_3764
