@@ -8,13 +8,14 @@ In case there are multiple sequence parts (hsps) per hit, the script checks the 
 In case there are more that one hit that belong to the same sample, the script checks which of the hits are longer and discardes the shorter ones.
 
 ## How to run the script
-In order to sort out duplicates, the script needs to recognize which hit belongs to which sample. The sample name must be located after the first "_" in the hit name, like someSortOfID_SAMPLENAME_someOtherInformation.
+In order to sort out duplicates, the script needs to recognize which hit belongs to which sample. The sample name must be located after the first underscore in the hit name, like someSortOfID_SAMPLENAME_someOtherInformation.
 Here's an example of a potential hit name, with the sample name being "Sebacina-incrustans-SS-16":
 C6FNANXX_Sebacina-incrustans-SS-16_AGTGGCAT-TGGCATTC_L002_R1_001_(paired)_trimmed_(paired)_contig_3764
 
 If the hit names are different, the script must be tweaked accordingly in this function:
 
   #function to get all sample names to find out duplicates
+  
   splitall <- function(x) {
     split.ls <- strsplit(ids[[x]], "_")
     return(split.ls[[1]][[2]])
