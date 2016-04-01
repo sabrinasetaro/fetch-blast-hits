@@ -1,3 +1,6 @@
+#R script written by Sabrina Setaro
+#File to parse a blast xml file, fetch sequences from hits and save them to a fasta file
+
 library(xml2)
 library(seqinr)
 library(plyr)
